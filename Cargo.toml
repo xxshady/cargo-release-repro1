@@ -8,7 +8,7 @@ version = "16.2.3-test.15"
 rust-version = "1.82.0"
 edition = "2021"
 license = "MIT"
-repository = "."
+repository = "https://github.com/xxshady/cargo-release-repro1"
 readme = "README.md"
 
 [workspace.dependencies]
