@@ -14,3 +14,7 @@ version = "0.3.6-repro.3"
 dependencies = [
  "anyhow",
 ]
+
+[[package]]
+name = "some_binary"
+version = "16.2.3-test.15"

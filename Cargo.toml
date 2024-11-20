@@ -1,7 +1,7 @@
 [workspace]
 resolver = "2"
 
-members = ["altvup"]
+members = ["altvup", "some_binary"]
 
 [workspace.package]
 version = "16.2.3-test.15"
