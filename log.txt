@@ -1,0 +1,760 @@
+[2024-11-20T13:55:55Z TRACE cargo_release::ops::index] Connecting to index
+[2024-11-20T13:55:55Z TRACE reqwest::blocking::wait] (ThreadId(1)) park without timeout
+[2024-11-20T13:55:55Z TRACE reqwest::blocking::client] (ThreadId(2)) start runtime::block_on
+[2024-11-20T13:55:55Z TRACE cargo_release::ops::index] Downloading index for cargo-altvup
+[2024-11-20T13:55:55Z TRACE reqwest::blocking::wait] wait at most 30s
+[2024-11-20T13:55:55Z TRACE reqwest::blocking::wait] (ThreadId(1)) park timeout 29.9999959s
+[2024-11-20T13:55:55Z TRACE hyper_util::client::legacy::pool] checkout waiting for idle connection: ("https", index.crates.io)
+[2024-11-20T13:55:55Z DEBUG reqwest::connect] starting new connection: https://index.crates.io/
+[2024-11-20T13:55:55Z TRACE hyper_util::client::legacy::connect::http] Http::connect; scheme=Some("https"), host=Some("index.crates.io"), port=None
+[2024-11-20T13:55:55Z DEBUG hyper_util::client::legacy::connect::dns] resolving host="index.crates.io"
+[2024-11-20T13:55:55Z DEBUG hyper_util::client::legacy::connect::http] connecting to 18.245.46.117:443
+[2024-11-20T13:55:55Z DEBUG hyper_util::client::legacy::connect::http] connected to 18.245.46.117:443
+[2024-11-20T13:55:55Z TRACE hyper_util::client::legacy::client] ALPN negotiated h2, updating pool
+[2024-11-20T13:55:55Z DEBUG h2::client] binding client connection
+[2024-11-20T13:55:55Z DEBUG h2::client] client connection bound
+[2024-11-20T13:55:55Z TRACE h2::codec::framed_write] FramedWrite::buffer; frame=Settings { flags: (0x0), enable_push: 0, initial_window_size: 2097152, max_frame_size: 16384, max_header_list_size: 16384 }
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> FramedWrite::buffer;
+[2024-11-20T13:55:55Z DEBUG h2::codec::framed_write] send frame=Settings { flags: (0x0), enable_push: 0, initial_window_size: 2097152, max_frame_size: 16384, max_header_list_size: 16384 }
+[2024-11-20T13:55:55Z TRACE h2::frame::settings] encoding SETTINGS; len=24
+[2024-11-20T13:55:55Z TRACE h2::frame::settings] encoding setting; val=EnablePush(0)
+[2024-11-20T13:55:55Z TRACE h2::frame::settings] encoding setting; val=InitialWindowSize(2097152)
+[2024-11-20T13:55:55Z TRACE h2::frame::settings] encoding setting; val=MaxFrameSize(16384)
+[2024-11-20T13:55:55Z TRACE h2::frame::settings] encoding setting; val=MaxHeaderListSize(16384)
+[2024-11-20T13:55:55Z TRACE h2::codec::framed_write] encoded settings rem=33
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- FramedWrite::buffer;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- FramedWrite::buffer;
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::flow_control] inc_window; sz=65535; old=0; new=65535
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::flow_control] inc_window; sz=65535; old=0; new=65535
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::prioritize] Prioritize::new; flow=FlowControl { window_size: Window(65535), available: Window(65535) }
+[2024-11-20T13:55:55Z DEBUG h2::proto::connection] Connection; peer=Client
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::recv] set_target_connection_window; target=5242880; available=65535, reserved=0
+[2024-11-20T13:55:55Z TRACE hyper_util::client::legacy::client] http2 handshake complete, spawning background dispatcher task
+[2024-11-20T13:55:55Z TRACE hyper_util::client::legacy::pool] put; add idle connection for ("https", index.crates.io)
+[2024-11-20T13:55:55Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", index.crates.io)
+[2024-11-20T13:55:55Z TRACE hyper_util::client::legacy::pool] checkout dropped for ("https", index.crates.io)
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:55Z TRACE tracing::span] poll;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> poll;
+[2024-11-20T13:55:55Z TRACE h2::proto::connection] connection.state=Open
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:55Z TRACE tracing::span] poll_ready;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> poll_ready;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- poll_ready;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- poll_ready;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:55Z TRACE tracing::span] FramedRead::poll_next;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> FramedRead::poll_next;
+[2024-11-20T13:55:55Z TRACE h2::codec::framed_read] poll
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- FramedRead::poll_next;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- FramedRead::poll_next;
+[2024-11-20T13:55:55Z TRACE h2::codec::framed_write] FramedWrite::buffer; frame=WindowUpdate { stream_id: StreamId(0), size_increment: 5177345 }
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> FramedWrite::buffer;
+[2024-11-20T13:55:55Z DEBUG h2::codec::framed_write] send frame=WindowUpdate { stream_id: StreamId(0), size_increment: 5177345 }
+[2024-11-20T13:55:55Z TRACE h2::frame::window_update] encoding WINDOW_UPDATE; id=StreamId(0)
+[2024-11-20T13:55:55Z TRACE h2::codec::framed_write] encoded window_update rem=46
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- FramedWrite::buffer;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- FramedWrite::buffer;
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::flow_control] inc_window; sz=5177345; old=65535; new=5242880
+[2024-11-20T13:55:55Z TRACE tracing::span] try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::prioritize] poll_complete
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::prioritize] schedule_pending_open
+[2024-11-20T13:55:55Z TRACE tracing::span] pop_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> pop_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- pop_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- pop_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span] FramedWrite::flush;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> FramedWrite::flush;
+[2024-11-20T13:55:55Z TRACE h2::codec::framed_write] queued_data_frame=false
+[2024-11-20T13:55:55Z TRACE h2::codec::framed_write] flushing buffer
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- FramedWrite::flush;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- FramedWrite::flush;
+[2024-11-20T13:55:55Z TRACE tracing::span] try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- poll;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- poll;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- Connection;
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::flow_control] inc_window; sz=65535; old=0; new=65535
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::flow_control] inc_window; sz=65535; old=0; new=65535
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::send] send_headers; frame=Headers { stream_id: StreamId(1), flags: (0x5: END_HEADERS | END_STREAM) }; init_window=65535
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::store] Queue::push_back
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::store]  -> first entry
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::prioritize] Prioritize::queue_frame; stream.id=StreamId(1)
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> Prioritize::queue_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- Prioritize::queue_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- Prioritize::queue_frame;
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::streams] drop_stream_ref; stream=Stream { id: StreamId(1), state: State { inner: HalfClosedLocal(AwaitingHeaders) }, is_counted: false, ref_count: 2, next_pending_send: None, is_pending_send: false, send_flow: FlowControl { window_size: Window(65535), available: Window(0) }, requested_send_capacity: 0, buffered_send_data: 0, send_task: None, pending_send: Deque { indices: Some(Indices { head: 0, tail: 0 }) }, next_pending_send_capacity: None, is_pending_send_capacity: false, send_capacity_inc: false, next_open: None, is_pending_open: true, is_pending_push: false, next_pending_accept: None, is_pending_accept: false, recv_flow: FlowControl { window_size: Window(65535), available: Window(65535) }, in_flight_recv_data: 0, next_window_update: None, is_pending_window_update: false, reset_at: None, next_reset_expire: None, pending_recv: Deque { indices: None }, is_recv: true, recv_task: None, pending_push_promises: Queue { indices: None, _p: PhantomData<h2::proto::streams::stream::NextAccept> }, content_length: Omitted }
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::counts] transition_after; stream=StreamId(1); state=State { inner: HalfClosedLocal(AwaitingHeaders) }; is_closed=false; pending_send_empty=false; buffered_send_data=0; num_recv=0; num_send=0
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:55Z TRACE tracing::span] poll;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> poll;
+[2024-11-20T13:55:55Z TRACE h2::proto::connection] connection.state=Open
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:55Z TRACE tracing::span] poll_ready;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> poll_ready;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- poll_ready;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- poll_ready;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:55Z TRACE tracing::span] FramedRead::poll_next;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> FramedRead::poll_next;
+[2024-11-20T13:55:55Z TRACE h2::codec::framed_read] poll
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- FramedRead::poll_next;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- FramedRead::poll_next;
+[2024-11-20T13:55:55Z TRACE tracing::span] try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::prioritize] poll_complete
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::prioritize] schedule_pending_open
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::prioritize] schedule_pending_open; stream=StreamId(1)
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::store] Queue::push_front
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::store]  -> first entry
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::prioritize] try_assign_capacity; stream.id=StreamId(1)
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> try_assign_capacity;
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::prioritize] requested=0 additional=0 buffered=0 window=65535 conn=65535
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- try_assign_capacity;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- try_assign_capacity;
+[2024-11-20T13:55:55Z TRACE tracing::span] pop_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> pop_frame;
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::prioritize] popped; stream.id=StreamId(1) stream.state=State { inner: HalfClosedLocal(AwaitingHeaders) }
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> popped;
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::prioritize] is_pending_reset=false
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::prioritize] pop_frame; frame=Headers { stream_id: StreamId(1), flags: (0x5: END_HEADERS | END_STREAM) }
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::counts] transition_after; stream=StreamId(1); state=State { inner: HalfClosedLocal(AwaitingHeaders) }; is_closed=false; pending_send_empty=true; buffered_send_data=0; num_recv=0; num_send=1
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- popped;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- popped;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- pop_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- pop_frame;
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::prioritize] writing frame=Headers { stream_id: StreamId(1), flags: (0x5: END_HEADERS | END_STREAM) }
+[2024-11-20T13:55:55Z TRACE h2::codec::framed_write] FramedWrite::buffer; frame=Headers { stream_id: StreamId(1), flags: (0x5: END_HEADERS | END_STREAM) }
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> FramedWrite::buffer;
+[2024-11-20T13:55:55Z DEBUG h2::codec::framed_write] send frame=Headers { stream_id: StreamId(1), flags: (0x5: END_HEADERS | END_STREAM) }
+[2024-11-20T13:55:55Z TRACE tracing::span] hpack::encode;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> hpack::encode;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- hpack::encode;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- hpack::encode;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- FramedWrite::buffer;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- FramedWrite::buffer;
+[2024-11-20T13:55:55Z TRACE tracing::span] try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE h2::proto::streams::prioritize] schedule_pending_open
+[2024-11-20T13:55:55Z TRACE tracing::span] pop_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> pop_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- pop_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- pop_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span] FramedWrite::flush;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> FramedWrite::flush;
+[2024-11-20T13:55:55Z TRACE h2::codec::framed_write] queued_data_frame=false
+[2024-11-20T13:55:55Z TRACE h2::codec::framed_write] flushing buffer
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- FramedWrite::flush;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- FramedWrite::flush;
+[2024-11-20T13:55:55Z TRACE tracing::span] try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] -> try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- try_reclaim_frame;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- poll;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- poll;
+[2024-11-20T13:55:55Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:55Z TRACE tracing::span] -- Connection;
+[2024-11-20T13:55:55Z TRACE hyper_util::client::legacy::pool] idle interval checking for expired
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] poll;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> poll;
+[2024-11-20T13:55:56Z TRACE h2::proto::connection] connection.state=Open
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] poll
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] attempting to decode a frame
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] frame decoded from buffer
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] read.bytes=27
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] FramedRead::decode_frame; offset=27
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::decode_frame;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] decoding frame from 27B
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] frame.kind=Settings
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::decode_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::decode_frame;
+[2024-11-20T13:55:56Z DEBUG h2::codec::framed_read] received frame=Settings { flags: (0x0), max_concurrent_streams: 128, initial_window_size: 65536, max_frame_size: 16777215 }
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::proto::connection] recv SETTINGS frame=Settings { flags: (0x0), max_concurrent_streams: 128, initial_window_size: 65536, max_frame_size: 16777215 }
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> poll_ready;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_write] FramedWrite::buffer; frame=Settings { flags: (0x1: ACK) }
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedWrite::buffer;
+[2024-11-20T13:55:56Z DEBUG h2::codec::framed_write] send frame=Settings { flags: (0x1: ACK) }
+[2024-11-20T13:55:56Z TRACE h2::frame::settings] encoding SETTINGS; len=0
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_write] encoded settings rem=9
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedWrite::buffer;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedWrite::buffer;
+[2024-11-20T13:55:56Z TRACE h2::proto::settings] ACK sent; applying settings
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] recv_stream_window_update; stream.id=StreamId(1) stream.state=State { inner: HalfClosedLocal(AwaitingHeaders) } inc=1 flow=FlowControl { window_size: Window(65535), available: Window(0) }
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> recv_stream_window_update;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- recv_stream_window_update;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- recv_stream_window_update;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] poll
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] attempting to decode a frame
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] frame decoded from buffer
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] read.bytes=13
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] FramedRead::decode_frame; offset=13
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::decode_frame;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] decoding frame from 13B
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] frame.kind=WindowUpdate
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::decode_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::decode_frame;
+[2024-11-20T13:55:56Z DEBUG h2::codec::framed_read] received frame=WindowUpdate { stream_id: StreamId(0), size_increment: 2147418112 }
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::proto::connection] recv WINDOW_UPDATE frame=WindowUpdate { stream_id: StreamId(0), size_increment: 2147418112 }
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::flow_control] inc_window; sz=2147418112; old=65535; new=2147483647
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] assign_connection_capacity; inc=2147418112
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> assign_connection_capacity;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- assign_connection_capacity;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- assign_connection_capacity;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] poll
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] attempting to decode a frame
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] frame decoded from buffer
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] read.bytes=9
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] FramedRead::decode_frame; offset=9
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::decode_frame;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] decoding frame from 9B
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] frame.kind=Settings
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::decode_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::decode_frame;
+[2024-11-20T13:55:56Z DEBUG h2::codec::framed_read] received frame=Settings { flags: (0x1: ACK) }
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::proto::connection] recv SETTINGS frame=Settings { flags: (0x1: ACK) }
+[2024-11-20T13:55:56Z DEBUG h2::proto::settings] received settings ACK; applying Settings { flags: (0x0), enable_push: 0, initial_window_size: 2097152, max_frame_size: 16384, max_header_list_size: 16384 }
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::recv] update_initial_window_size; new=2097152; old=65535
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::recv] incrementing all windows; inc=2031617
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::flow_control] inc_window; sz=2031617; old=65535; new=2097152
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] poll
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] attempting to decode a frame
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] frame decoded from buffer
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] read.bytes=415
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] FramedRead::decode_frame; offset=415
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::decode_frame;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] decoding frame from 415B
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] frame.kind=Headers
+[2024-11-20T13:55:56Z TRACE h2::frame::headers] loading headers; flags=(0x4: END_HEADERS)
+[2024-11-20T13:55:56Z TRACE tracing::span] hpack::decode;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> hpack::decode;
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] decode
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=406 kind=Indexed
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=405 kind=LiteralWithIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=396 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=368 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=334 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=317 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=289 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=264 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=224 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=210 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=177 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=159 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=137 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=84 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=65 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=7 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- hpack::decode;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- hpack::decode;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::decode_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::decode_frame;
+[2024-11-20T13:55:56Z DEBUG h2::codec::framed_read] received frame=Headers { stream_id: StreamId(1), flags: (0x4: END_HEADERS) }
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::proto::connection] recv HEADERS frame=Headers { stream_id: StreamId(1), flags: (0x4: END_HEADERS) }
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::streams] recv_headers; stream=StreamId(1); state=State { inner: HalfClosedLocal(AwaitingHeaders) }
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::recv] opening stream; init_window=2097152
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::counts] transition_after; stream=StreamId(1); state=State { inner: HalfClosedLocal(Streaming) }; is_closed=false; pending_send_empty=true; buffered_send_data=0; num_recv=0; num_send=1
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] poll
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] attempting to decode a frame
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] frame decoded from buffer
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] read.bytes=1099
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] FramedRead::decode_frame; offset=1099
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::decode_frame;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] decoding frame from 1099B
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] frame.kind=Data
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::decode_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::decode_frame;
+[2024-11-20T13:55:56Z DEBUG h2::codec::framed_read] received frame=Data { stream_id: StreamId(1) }
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::proto::connection] recv DATA frame=Data { stream_id: StreamId(1) }
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::recv] recv_data; size=1090; connection=5242880; stream=2097152
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::flow_control] send_data; sz=1090; window=5242880; available=5242880
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::flow_control] send_data; sz=1090; window=2097152; available=2097152
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::counts] transition_after; stream=StreamId(1); state=State { inner: HalfClosedLocal(Streaming) }; is_closed=false; pending_send_empty=true; buffered_send_data=0; num_recv=0; num_send=1
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] poll
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] attempting to decode a frame
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] frame decoded from buffer
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] read.bytes=9
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] FramedRead::decode_frame; offset=9
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::decode_frame;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] decoding frame from 9B
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] frame.kind=Data
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::decode_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::decode_frame;
+[2024-11-20T13:55:56Z DEBUG h2::codec::framed_read] received frame=Data { stream_id: StreamId(1), flags: (0x1: END_STREAM) }
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::proto::connection] recv DATA frame=Data { stream_id: StreamId(1), flags: (0x1: END_STREAM) }
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::recv] recv_data; size=0; connection=5241790; stream=2096062
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::flow_control] send_data; sz=0; window=5241790; available=5241790
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::state] recv_close: HalfClosedLocal => Closed
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::flow_control] send_data; sz=0; window=2096062; available=2096062
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::counts] transition_after; stream=StreamId(1); state=State { inner: Closed(EndStream) }; is_closed=true; pending_send_empty=true; buffered_send_data=0; num_recv=0; num_send=1
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::counts] dec_num_streams; stream=StreamId(1)
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] poll
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] attempting to decode a frame
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span] try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] poll_complete
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] schedule_pending_open
+[2024-11-20T13:55:56Z TRACE tracing::span] pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_write] queued_data_frame=false
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_write] flushing buffer
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE tracing::span] try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- poll;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- poll;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- Connection;
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::streams] drop_stream_ref; stream=Stream { id: StreamId(1), state: State { inner: Closed(EndStream) }, is_counted: false, ref_count: 2, next_pending_send: None, is_pending_send: false, send_flow: FlowControl { window_size: Window(65535), available: Window(0) }, requested_send_capacity: 0, buffered_send_data: 0, send_task: None, pending_send: Deque { indices: None }, next_pending_send_capacity: None, is_pending_send_capacity: false, send_capacity_inc: false, next_open: None, is_pending_open: false, is_pending_push: false, next_pending_accept: None, is_pending_accept: false, recv_flow: FlowControl { window_size: Window(2096062), available: Window(2096062) }, in_flight_recv_data: 1090, next_window_update: None, is_pending_window_update: false, reset_at: None, next_reset_expire: None, pending_recv: Deque { indices: Some(Indices { head: 1, tail: 2 }) }, is_recv: true, recv_task: None, pending_push_promises: Queue { indices: None, _p: PhantomData<h2::proto::streams::stream::NextAccept> }, content_length: Omitted }
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::counts] transition_after; stream=StreamId(1); state=State { inner: Closed(EndStream) }; is_closed=true; pending_send_empty=true; buffered_send_data=0; num_recv=0; num_send=0
+[2024-11-20T13:55:56Z TRACE reqwest::blocking::wait] wait at most 30s
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::recv] release_capacity; size=1090
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::recv] release_connection_capacity; size=1090, connection in_flight_data=1090
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] attempting to decode a frame
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] frame decoded from buffer
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] attempting to decode a frame
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] attempting to decode a frame
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] frame decoded from buffer
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] attempting to decode a frame
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::streams] drop_stream_ref; stream=Stream { id: StreamId(1), state: State { inner: Closed(EndStream) }, is_counted: false, ref_count: 1, next_pending_send: None, is_pending_send: false, send_flow: FlowControl { window_size: Window(65535), available: Window(0) }, requested_send_capacity: 0, buffered_send_data: 0, send_task: None, pending_send: Deque { indices: None }, next_pending_send_capacity: None, is_pending_send_capacity: false, send_capacity_inc: false, next_open: None, is_pending_open: false, is_pending_push: false, next_pending_accept: None, is_pending_accept: false, recv_flow: FlowControl { window_size: Window(2096062), available: Window(2097152) }, in_flight_recv_data: 0, next_window_update: None, is_pending_window_update: false, reset_at: None, next_reset_expire: None, pending_recv: Deque { indices: None }, is_recv: false, recv_task: None, pending_push_promises: Queue { indices: None, _p: PhantomData<h2::proto::streams::stream::NextAccept> }, content_length: Omitted }
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::counts] transition_after; stream=StreamId(1); state=State { inner: Closed(EndStream) }; is_closed=true; pending_send_empty=true; buffered_send_data=0; num_recv=0; num_send=0
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] poll;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> poll;
+[2024-11-20T13:55:56Z TRACE h2::proto::connection] connection.state=Open
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] poll
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE cargo_release::ops::index] Downloading index for some_binary
+[2024-11-20T13:55:56Z TRACE tracing::span] try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE reqwest::blocking::wait] wait at most 30s
+[2024-11-20T13:55:56Z TRACE reqwest::blocking::wait] (ThreadId(1)) park timeout 29.9999991s
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] poll_complete
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] schedule_pending_open
+[2024-11-20T13:55:56Z TRACE tracing::span] pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_write] flushing buffer
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE tracing::span] try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- poll;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- poll;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- Connection;
+[2024-11-20T13:55:56Z TRACE hyper_util::client::legacy::pool] take? ("https", index.crates.io): expiration = Some(90s)
+[2024-11-20T13:55:56Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", index.crates.io)
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::flow_control] inc_window; sz=2097152; old=0; new=2097152
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::flow_control] inc_window; sz=65536; old=0; new=65536
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::send] send_headers; frame=Headers { stream_id: StreamId(3), flags: (0x5: END_HEADERS | END_STREAM) }; init_window=65536
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::store] Queue::push_back
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::store]  -> first entry
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] Prioritize::queue_frame; stream.id=StreamId(3)
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Prioritize::queue_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Prioritize::queue_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- Prioritize::queue_frame;
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::streams] drop_stream_ref; stream=Stream { id: StreamId(3), state: State { inner: HalfClosedLocal(AwaitingHeaders) }, is_counted: false, ref_count: 2, next_pending_send: None, is_pending_send: false, send_flow: FlowControl { window_size: Window(65536), available: Window(0) }, requested_send_capacity: 0, buffered_send_data: 0, send_task: None, pending_send: Deque { indices: Some(Indices { head: 0, tail: 0 }) }, next_pending_send_capacity: None, is_pending_send_capacity: false, send_capacity_inc: false, next_open: None, is_pending_open: true, is_pending_push: false, next_pending_accept: None, is_pending_accept: false, recv_flow: FlowControl { window_size: Window(2097152), available: Window(2097152) }, in_flight_recv_data: 0, next_window_update: None, is_pending_window_update: false, reset_at: None, next_reset_expire: None, pending_recv: Deque { indices: None }, is_recv: true, recv_task: None, pending_push_promises: Queue { indices: None, _p: PhantomData<h2::proto::streams::stream::NextAccept> }, content_length: Omitted }
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::counts] transition_after; stream=StreamId(3); state=State { inner: HalfClosedLocal(AwaitingHeaders) }; is_closed=false; pending_send_empty=false; buffered_send_data=0; num_recv=0; num_send=0
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] poll;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> poll;
+[2024-11-20T13:55:56Z TRACE h2::proto::connection] connection.state=Open
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] poll
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span] try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] poll_complete
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] schedule_pending_open
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] schedule_pending_open; stream=StreamId(3)
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::store] Queue::push_front
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::store]  -> first entry
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] try_assign_capacity; stream.id=StreamId(3)
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> try_assign_capacity;
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] requested=0 additional=0 buffered=0 window=65536 conn=2147483647
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- try_assign_capacity;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- try_assign_capacity;
+[2024-11-20T13:55:56Z TRACE tracing::span] pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> pop_frame;
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] popped; stream.id=StreamId(3) stream.state=State { inner: HalfClosedLocal(AwaitingHeaders) }
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> popped;
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] is_pending_reset=false
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] pop_frame; frame=Headers { stream_id: StreamId(3), flags: (0x5: END_HEADERS | END_STREAM) }
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::counts] transition_after; stream=StreamId(3); state=State { inner: HalfClosedLocal(AwaitingHeaders) }; is_closed=false; pending_send_empty=true; buffered_send_data=0; num_recv=0; num_send=1
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- popped;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- popped;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- pop_frame;
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] writing frame=Headers { stream_id: StreamId(3), flags: (0x5: END_HEADERS | END_STREAM) }
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_write] FramedWrite::buffer; frame=Headers { stream_id: StreamId(3), flags: (0x5: END_HEADERS | END_STREAM) }
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedWrite::buffer;
+[2024-11-20T13:55:56Z DEBUG h2::codec::framed_write] send frame=Headers { stream_id: StreamId(3), flags: (0x5: END_HEADERS | END_STREAM) }
+[2024-11-20T13:55:56Z TRACE tracing::span] hpack::encode;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> hpack::encode;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- hpack::encode;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- hpack::encode;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedWrite::buffer;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedWrite::buffer;
+[2024-11-20T13:55:56Z TRACE tracing::span] try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] schedule_pending_open
+[2024-11-20T13:55:56Z TRACE tracing::span] pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_write] queued_data_frame=false
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_write] flushing buffer
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE tracing::span] try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- poll;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- poll;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] poll;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> poll;
+[2024-11-20T13:55:56Z TRACE h2::proto::connection] connection.state=Open
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] poll
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] attempting to decode a frame
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] frame decoded from buffer
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] read.bytes=217
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] FramedRead::decode_frame; offset=217
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::decode_frame;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] decoding frame from 217B
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] frame.kind=Headers
+[2024-11-20T13:55:56Z TRACE h2::frame::headers] loading headers; flags=(0x4: END_HEADERS)
+[2024-11-20T13:55:56Z TRACE tracing::span] hpack::decode;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> hpack::decode;
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] decode
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=208 kind=Indexed
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=207 kind=LiteralWithIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=194 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=180 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=152 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=128 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=75 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE h2::hpack::decoder] rem=56 kind=LiteralWithoutIndexing
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- hpack::decode;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- hpack::decode;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::decode_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::decode_frame;
+[2024-11-20T13:55:56Z DEBUG h2::codec::framed_read] received frame=Headers { stream_id: StreamId(3), flags: (0x4: END_HEADERS) }
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::proto::connection] recv HEADERS frame=Headers { stream_id: StreamId(3), flags: (0x4: END_HEADERS) }
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::streams] recv_headers; stream=StreamId(3); state=State { inner: HalfClosedLocal(AwaitingHeaders) }
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::recv] opening stream; init_window=2097152
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::counts] transition_after; stream=StreamId(3); state=State { inner: HalfClosedLocal(Streaming) }; is_closed=false; pending_send_empty=true; buffered_send_data=0; num_recv=0; num_send=1
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] poll
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] attempting to decode a frame
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] frame decoded from buffer
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] read.bytes=297
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] FramedRead::decode_frame; offset=297
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::decode_frame;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] decoding frame from 297B
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] frame.kind=Data
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::decode_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::decode_frame;
+[2024-11-20T13:55:56Z DEBUG h2::codec::framed_read] received frame=Data { stream_id: StreamId(3) }
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::proto::connection] recv DATA frame=Data { stream_id: StreamId(3) }
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::recv] recv_data; size=288; connection=5241790; stream=2097152
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::flow_control] send_data; sz=288; window=5241790; available=5242880
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::flow_control] send_data; sz=288; window=2097152; available=2097152
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::counts] transition_after; stream=StreamId(3); state=State { inner: HalfClosedLocal(Streaming) }; is_closed=false; pending_send_empty=true; buffered_send_data=0; num_recv=0; num_send=1
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] poll
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] attempting to decode a frame
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] frame decoded from buffer
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] read.bytes=9
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] FramedRead::decode_frame; offset=9
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::decode_frame;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] decoding frame from 9B
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] frame.kind=Data
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::decode_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::decode_frame;
+[2024-11-20T13:55:56Z DEBUG h2::codec::framed_read] received frame=Data { stream_id: StreamId(3), flags: (0x1: END_STREAM) }
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::proto::connection] recv DATA frame=Data { stream_id: StreamId(3), flags: (0x1: END_STREAM) }
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::recv] recv_data; size=0; connection=5241502; stream=2096864
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::flow_control] send_data; sz=0; window=5241502; available=5242592
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::state] recv_close: HalfClosedLocal => Closed
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::flow_control] send_data; sz=0; window=2096864; available=2096864
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::counts] transition_after; stream=StreamId(3); state=State { inner: Closed(EndStream) }; is_closed=true; pending_send_empty=true; buffered_send_data=0; num_recv=0; num_send=1
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::counts] dec_num_streams; stream=StreamId(3)
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] poll
+[2024-11-20T13:55:56Z TRACE tokio_util::codec::framed_impl] attempting to decode a frame
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span] try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] poll_complete
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] schedule_pending_open
+[2024-11-20T13:55:56Z TRACE tracing::span] pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_write] flushing buffer
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE tracing::span] try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- poll;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- poll;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- Connection;
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::streams] drop_stream_ref; stream=Stream { id: StreamId(3), state: State { inner: Closed(EndStream) }, is_counted: false, ref_count: 2, next_pending_send: None, is_pending_send: false, send_flow: FlowControl { window_size: Window(65536), available: Window(0) }, requested_send_capacity: 0, buffered_send_data: 0, send_task: None, pending_send: Deque { indices: None }, next_pending_send_capacity: None, is_pending_send_capacity: false, send_capacity_inc: false, next_open: None, is_pending_open: false, is_pending_push: false, next_pending_accept: None, is_pending_accept: false, recv_flow: FlowControl { window_size: Window(2096864), available: Window(2096864) }, in_flight_recv_data: 288, next_window_update: None, is_pending_window_update: false, reset_at: None, next_reset_expire: None, pending_recv: Deque { indices: Some(Indices { head: 1, tail: 0 }) }, is_recv: true, recv_task: None, pending_push_promises: Queue { indices: None, _p: PhantomData<h2::proto::streams::stream::NextAccept> }, content_length: Omitted }
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::counts] transition_after; stream=StreamId(3); state=State { inner: Closed(EndStream) }; is_closed=true; pending_send_empty=true; buffered_send_data=0; num_recv=0; num_send=0
+[2024-11-20T13:55:56Z TRACE reqwest::blocking::wait] wait at most 30s
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::recv] release_capacity; size=288
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::recv] release_connection_capacity; size=288, connection in_flight_data=288
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::recv] release_capacity; size=0
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::recv] release_connection_capacity; size=0, connection in_flight_data=0
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::streams] drop_stream_ref; stream=Stream { id: StreamId(3), state: State { inner: Closed(EndStream) }, is_counted: false, ref_count: 1, next_pending_send: None, is_pending_send: false, send_flow: FlowControl { window_size: Window(65536), available: Window(0) }, requested_send_capacity: 0, buffered_send_data: 0, send_task: None, pending_send: Deque { indices: None }, next_pending_send_capacity: None, is_pending_send_capacity: false, send_capacity_inc: false, next_open: None, is_pending_open: false, is_pending_push: false, next_pending_accept: None, is_pending_accept: false, recv_flow: FlowControl { window_size: Window(2096864), available: Window(2097152) }, in_flight_recv_data: 0, next_window_update: None, is_pending_window_update: false, reset_at: None, next_reset_expire: None, pending_recv: Deque { indices: None }, is_recv: false, recv_task: None, pending_push_promises: Queue { indices: None, _p: PhantomData<h2::proto::streams::stream::NextAccept> }, content_length: Omitted }
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::counts] transition_after; stream=StreamId(3); state=State { inner: Closed(EndStream) }; is_closed=true; pending_send_empty=true; buffered_send_data=0; num_recv=0; num_send=0
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] poll;
+[2024-11-20T13:55:56Z DEBUG cargo_release::steps::release] disabled by user, skipping some_binary (no tag found)
+[2024-11-20T13:55:56Z TRACE cargo_release::ops::index] Reusing index for some_binary
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> poll;
+[2024-11-20T13:55:56Z TRACE h2::proto::connection] connection.state=Open
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> Connection;
+warning: disabled by user, skipping some_binary v16.2.3-test.15 despite being unpublished
+[2024-11-20T13:55:56Z TRACE tracing::span] poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- poll_ready;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_read] poll
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedRead::poll_next;
+[2024-11-20T13:55:56Z TRACE tracing::span] try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] poll_complete
+[2024-11-20T13:55:56Z TRACE h2::proto::streams::prioritize] schedule_pending_open
+[2024-11-20T13:55:56Z TRACE tracing::span] pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- pop_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE h2::codec::framed_write] flushing buffer
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- FramedWrite::flush;
+[2024-11-20T13:55:56Z TRACE tracing::span] try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] -> try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- try_reclaim_frame;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- poll;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- poll;
+[2024-11-20T13:55:56Z TRACE tracing::span::active] <- Connection;
+[2024-11-20T13:55:56Z TRACE tracing::span] -- Connection;
+[2024-11-20T13:55:56Z TRACE cargo_release::ops::index] Reusing index for cargo-altvup
+[2024-11-20T13:55:56Z DEBUG cargo_release::steps] cannot detect changes for cargo-altvup because no tag was found. Try setting `--prev-tag-name <TAG>`.
+[2024-11-20T13:55:56Z DEBUG globset] glob converted to regex: Glob { glob: "**/*", re: "(?-u)^(?:/?|.*/)[^/]*$", opts: GlobOptions { case_insensitive: false, literal_separator: true, backslash_escape: true, empty_alternates: false }, tokens: Tokens([RecursivePrefix, ZeroOrMore]) }
+[2024-11-20T13:55:56Z DEBUG globset] built glob set; 0 literals, 1 basenames, 0 extensions, 0 prefixes, 0 suffixes, 0 required extensions, 1 regexes
+[2024-11-20T13:55:56Z TRACE cargo_release::ops::index] Reusing index for cargo-altvup
+   Upgrading cargo-altvup from 0.3.6-repro.5 to 0.3.6-repro.6
+[2024-11-20T13:55:56Z DEBUG cargo_release::steps::release] updating lock file
+[2024-11-20T13:55:56Z DEBUG cargo_release::ops::replace] Unrendered {{version}} present in template "release new version: {{version}} (workspace)"
+[2024-11-20T13:55:56Z TRACE cargo_release::ops::cmd] cd D:\rust_dev\cargo-release-repro
+[2024-11-20T13:55:56Z TRACE cargo_release::ops::cmd] git commit  -am release new version: {{version}} (workspace)
+warning: in the working copy of 'Cargo.lock', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'altvup/Cargo.toml', LF will be replaced by CRLF the next time Git touches it
+[main 6d95831] release new version: {{version}} (workspace)
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+  Publishing cargo-altvup
+[2024-11-20T13:55:57Z TRACE cargo_release::ops::cmd] \\?\C:\Users\xshady\.rustup\toolchains\stable-x86_64-pc-windows-msvc\bin\cargo.exe publish --manifest-path D:\rust_dev\cargo-release-repro\altvup\Cargo.toml --package cargo-altvup
+    Updating crates.io index
+   Packaging cargo-altvup v0.3.6-repro.6 (D:\rust_dev\cargo-release-repro\altvup)
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Updating crates.io index
+    Packaged 7 files, 1.9KiB (1.2KiB compressed)
+   Verifying cargo-altvup v0.3.6-repro.6 (D:\rust_dev\cargo-release-repro\altvup)
+   Compiling anyhow v1.0.93
+   Compiling cargo-altvup v0.3.6-repro.6 (D:\rust_dev\cargo-release-repro\target\package\cargo-altvup-0.3.6-repro.6)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.43s
+   Uploading cargo-altvup v0.3.6-repro.6 (D:\rust_dev\cargo-release-repro\altvup)
+    Uploaded cargo-altvup v0.3.6-repro.6 to registry `crates-io`
+note: waiting for `cargo-altvup v0.3.6-repro.6` to be available at registry `crates-io`.
+You may press ctrl-c to skip waiting; the crate should be available shortly.
+   Published cargo-altvup v0.3.6-repro.6 at registry `crates-io`
+[2024-11-20T13:56:08Z TRACE reqwest::blocking::client] closing runtime thread (ThreadId(2))
+[2024-11-20T13:56:08Z TRACE reqwest::blocking::client] signaled close for runtime thread (ThreadId(2))
+[2024-11-20T13:56:08Z TRACE reqwest::blocking::client] (ThreadId(2)) Receiver is shutdown
+[2024-11-20T13:56:08Z TRACE reqwest::blocking::client] (ThreadId(2)) end runtime::block_on
+[2024-11-20T13:56:08Z TRACE h2::proto::streams::streams] Streams::recv_eof
+[2024-11-20T13:56:08Z TRACE tracing::span] clear_pending_capacity;
+[2024-11-20T13:56:08Z TRACE tracing::span::active] -> clear_pending_capacity;
+[2024-11-20T13:56:08Z TRACE tracing::span::active] <- clear_pending_capacity;
+[2024-11-20T13:56:08Z TRACE tracing::span] -- clear_pending_capacity;
+[2024-11-20T13:56:08Z TRACE tracing::span] -- Connection;
+[2024-11-20T13:56:08Z TRACE reqwest::blocking::client] (ThreadId(2)) finished
+[2024-11-20T13:56:08Z TRACE reqwest::blocking::client] closed runtime thread (ThreadId(2))
