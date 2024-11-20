@@ -11,6 +11,9 @@ description = "Rust module + alt:V server installer"
 [[bin]]
 name = "cargo-altvup"
 
+[dependencies]
+anyhow.workspace = true
+
 [package.metadata.release]
 pre-release-commit-message = "release new version: {{version}} (package)"
 tag = false

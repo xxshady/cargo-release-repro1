@@ -12,6 +12,7 @@ repository = "."
 readme = "README.md"
 
 [workspace.dependencies]
+anyhow = "1.0.93"
 
 [workspace.metadata.release]
 pre-release-commit-message = "release new version: {{version}} (workspace)"
