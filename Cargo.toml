@@ -1,0 +1,18 @@
+[workspace]
+resolver = "2"
+
+members = ["altvup"]
+
+[workspace.package]
+version = "16.2.3-test.15"
+rust-version = "1.82.0"
+edition = "2021"
+license = "MIT"
+repository = "."
+readme = "README.md"
+
+[workspace.dependencies]
+
+[workspace.metadata.release]
+pre-release-commit-message = "release new version: {{version}} (workspace)"
+tag = false
